@@ -47,6 +47,8 @@ input {
   border-color: initial;
   border-image: initial;
 }
+
+/* ******************************************************************************************************* */
 input {
   display: none;
 }
@@ -81,8 +83,8 @@ input:checked ~ nav {
 
 ul {
   list-style: none;
-  margin: 8px 0 0 0;
-  width: 100px;
+  /*margin: 8px 0 0 0;*/
+  width: 200px;
 }
 
 li {
@@ -100,19 +102,7 @@ a {
 a:hover {
   color: #ff7b29;
 }
-
-/*  
-    Ãžegar vafrinn fer yfir 599 pixle taka 
-    skilgreiningarnar hÃ©r fyrir neÃ°an gildi
-*/
-  @media screen and (min-width: 600px){
-    label { display: none; }                        /* Felum lableinn */
-    nav { overflow: visible;margin-right: 10px; }   /* SÃ½num fellivalslistann */
-    ul li { display: inline-block; }                /* li er block element, lÃ¡tum hann fljÃ³ta til hÃ¦gri hÃ©r */
-    ul { border: 0px; width: 100%; }                /* tÃ¶kum borÃ°an af fellivalslistanum Ã­ burtu */
-    li { border-bottom: 0; }                        /* tÃ¶kum undirlÃ­nur Ã­ burtu sem eru Ã­ mobile ham */
-  }
-
+/* ******************************************************************************************************* */
 @font-face {
     font-family: 'icomoon';
     src:  url('fonts2/icomoon.eot?jy8ihy');
@@ -318,11 +308,11 @@ a{
 }
 .tab{
     display: inline-block;
-    float: right;
+    /* float: right;                        Omar við notum aldrei float......... */
     padding: 5px 10px 5px 10px;
     background:rgb(241, 167, 76) ;
     color: #FFFFFF;
-    margin: 70px 5px 10px 5px;
+    margin: 5px;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
@@ -379,6 +369,20 @@ body{
   grid-template-columns: 5fr 2fr;
   
 }
+
+/* 
+    Höfum þetta aftast Omar
+    Þegar vafrinn fer yfir 599 pixle taka 
+    skilgreiningarnar hér fyrir neðan gildi
+*/
+@media screen and (min-width: 600px){
+  label { display: none; }                        /* Felum lableinn */
+  nav { overflow: visible;margin-right: 10px;}   /* Sýnum fellivalslistann */
+  ul li { display: inline-block; }                /* li er block element, látum hann fljóta til hægri hér */
+  ul { border: 0px; width: 100%; }                /* tökum borðan af fellivalslistanum burt */
+  li { border-bottom: 0; }                        /* tökum undirlínur burt af fellivalslistanum */
+}
+
 @media screen and (min-width: 800px)
 {
     .vcard{
